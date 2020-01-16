@@ -4,3 +4,9 @@
 #resetButton{
     visibility: hidden;
 }
+.hidden{
+    visibility: hidden;
+}
+#resultsList{
+    visibility: hidden;
+}

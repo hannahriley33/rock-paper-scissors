@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <h1>
+        Lets play rock, paper, scissors. Go ahead and choose your first throw...
+    </h1>
+    <label>
+        <input type="radio" name="player-choice" class="userChoice" value="choice" id="rock">
+        Rock
+        <img id="rockImg">
+    </label>
+
+    <label>
+        <input type="radio" name="player-choice" class="userChoice" value="choice" id="paper">
+        Paper
+        <img id="paperImg">
+    </label>
+
+    <label>
+        <input type="radio" name="player-choice" class="userChoice" value="choice" id="scissors">
+        Scissors
+        <img id="scissorsImg">
+    </label>
+
+    <label>
+        Tries remaining:
+        <span id="triesSpan"></span>
+        <br>
+    </label>
+    <label>
+        Number of wins:
+        <span id="winSpan"></span>
+    </label>
+    <label>
+        <button type="button" id="throwButton">
+        Shoot
+    </label>
+    <label>
+        <button type="button" id="resetButton">
+        Play again
+    </label>
+    
+    
+
+
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

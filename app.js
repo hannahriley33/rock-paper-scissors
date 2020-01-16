@@ -8,8 +8,6 @@ const losesDisplay = document.getElementById('loses');
 const drawsDisplay = document.getElementById('draws');
 const resultsList = document.getElementById('resultsList');
 const computerThrow = document.getElementById('computerThrow');
-
-//let numberTries = document.getElementById('tries');
 const triesText = document.getElementById('tries');
 const resultsDisplay = document.getElementById('resultsDisplay');
 
@@ -23,27 +21,27 @@ shootButton.addEventListener('click', () => {
     const userChoice = userInput.value;
     const computerChoice = getRandomThrow();
     const results = checkResults(userChoice, computerChoice);
+   
     triesText.style.visibility = 'visible';
     triesBox.style.visibility = 'visible';
+    resultsList.style.visibility = 'visible';
+    computerThrow.style.visibility = 'visible';
+
     console.log('user', userChoice);
     console.log('computer', computerChoice);
     console.log('results', results);
     console.log(tries);
+
     computerThrew.textContent = computerChoice;
 
-    resultsList.style.visibility = 'visible';
-    computerThrow.style.visibility = 'visible';
 
-    
     if (tries === 0){
         resetButton.style.visibility = 'visible';
         shootButton.disabled = true;
     }
-    
 
     if(results === 'win'){
         wins++;
-        
         triesText.textContent = tries;
         winsDisplay.textContent = wins;
         resultsDisplay.style.visibility = 'visible';
@@ -51,13 +49,12 @@ shootButton.addEventListener('click', () => {
         tries--;
     } else if (results === 'lose'){
         loses++;
-
         triesText.textContent = tries;
         losesDisplay.textContent = loses;
         resultsDisplay.style.visibility = 'visible';
         resultsDisplay.textContent = 'You lose!'
         tries--;
-//lose
+
     } else {
         draws++;
         triesText.textContent = tries;
@@ -65,7 +62,6 @@ shootButton.addEventListener('click', () => {
         resultsDisplay.style.visibility = 'visible';
         resultsDisplay.textContent = 'It\'s a draw!';
         tries--;
-//draw
     }
 });
 
@@ -73,11 +69,15 @@ resetButton.addEventListener('click', () => {
     tries = 3;
     resetButton.style.visibility = 'hidden';
     resultsDisplay.style.visibility = 'hidden';
+    resultsList.style.visibility = 'hidden';
+    computerThrow.style.visibility = 'hidden';
+
     drawsDisplay.textContent = draws;
     triesText.textContent = tries;
     shootButton.disabled = false;
-    resultsList.style.visibility = 'hidden';
+
     console.log(tries);
+    
     wins = 0;
     loses = 0;
     draws = 0;

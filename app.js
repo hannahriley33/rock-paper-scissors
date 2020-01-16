@@ -7,6 +7,7 @@ const winsDisplay = document.getElementById('wins');
 const losesDisplay = document.getElementById('loses');
 const drawsDisplay = document.getElementById('draws');
 const resultsList = document.getElementById('resultsList');
+const computerThrow = document.getElementById('computerThrow');
 
 //let numberTries = document.getElementById('tries');
 const triesText = document.getElementById('tries');
@@ -28,8 +29,11 @@ shootButton.addEventListener('click', () => {
     console.log('computer', computerChoice);
     console.log('results', results);
     console.log(tries);
+    computerThrew.textContent = computerChoice;
 
     resultsList.style.visibility = 'visible';
+    computerThrow.style.visibility = 'visible';
+
     
     if (tries === 0){
         resetButton.style.visibility = 'visible';

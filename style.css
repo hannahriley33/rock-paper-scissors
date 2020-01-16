@@ -7,6 +7,9 @@
 .hidden{
     visibility: hidden;
 }
+#computerThrow{
+    visibility: hidden;
+}
 #resultsList{
     visibility: hidden;
 }
@@ -17,7 +20,7 @@ body{
     text-align: center;
 }
 #rps{
-    margin: 200px 40px 20px 40px;
+    margin: 150px 40px 20px 40px;
     font-size: 30px;
 }
 #shootButton{
@@ -29,4 +32,15 @@ body{
     width: 100px;
     height: 50px;
     border-radius: 50%;
+}
+#computerThrow{
+    font-size: 45px;
+    margin: 150px 20px 0px 600px;
+}
+#triesBox{
+
+    margin: 10px 20px 20px 100px;
+}
+#resultsList, #resultsDisplay{
+    font-size: 25px;
 }

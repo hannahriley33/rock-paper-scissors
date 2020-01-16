@@ -1,16 +1,20 @@
-export function getRandomThrow(){
-    const randomNumber = math.floor(math.random()*3);
+ function getRandomThrow(){
+    const randomNumber = Math.floor(Math.random()*3);
     //give 0,1,2
-    if (randomNumber === 0){
-        return 'rock';
-    } else if (randomNumber === 1){
-        return 'paper';
-    } else if (randomNumber === 2){
-        return 'scissors';
-    };
+    return element(randomNumber);
 };
+ function element(computerNumber){
+     if (computerNumber === 0){
+        return 'rock';
+    } else if (computerNumber === 1){
+        return 'paper';
+    } else if (computerNumber === 2){
+        return 'scissors';
+    }
+ };
 
-export function checkResults(userChoice, computerThrow){
+
+ function checkResults(userChoice, computerThrow){
     
     if (userChoice === computerThrow){
         return 'draw'
@@ -30,3 +34,8 @@ export function checkResults(userChoice, computerThrow){
 };
    
 //let userChoice = document.querySelector('.userChoice');
+export {
+    getRandomThrow,
+    checkResults,
+    element
+}

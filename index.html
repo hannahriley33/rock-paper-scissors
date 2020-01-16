@@ -14,21 +14,21 @@
         Lets play rock, paper, scissors. Go ahead and choose your first throw...
     </h1>
     <label>
-        <input type="radio" name="player-choice" class="userChoice" value="choice" id="rock">
+        <input type="radio" name="player-choice" class="userChoice" value="rock" id="rock">
         Rock
-        <img id="rockImg">
+        <img id="rockImg" src="">
     </label>
 
     <label>
-        <input type="radio" name="player-choice" class="userChoice" value="choice" id="paper">
+        <input type="radio" name="player-choice" class="userChoice" value="paper" id="paper">
         Paper
-        <img id="paperImg">
+        <img id="paperImg" src="">
     </label>
 
     <label>
-        <input type="radio" name="player-choice" class="userChoice" value="choice" id="scissors">
+        <input type="radio" name="player-choice" class="userChoice" value="scissors" id="scissors">
         Scissors
-        <img id="scissorsImg">
+        <img id="scissorsImg" src="">
     </label>
 
     <label id="triesBox">
@@ -36,19 +36,25 @@
         <span id="triesSpan">3</span>
         <br>
     </label>
-    <label>
-        Number of wins:
-        <span id="winSpan">0</span>
-    </label>
-    <label id="throwButton">
-        <button type="button">
-        Shoot
-    </label>
-    <label id="resetButton">
-        <button type="button">
-        Play again
-    </label>
     
+        <button id="shootButton" type="button">
+        Shoot
+        </button>
+    
+
+        <button id="resetButton" type="button">
+        Play again
+        </button>
+
+
+    <div class="hidden">
+        <p id="resultsList">
+            Wins:<span id="wins">0</span> Losses: <span id="loses">0</span> Draws: <span id="draws">0</span>
+        </p>
+        <p id="resultsDisplay">
+
+        </p>
+    </div>
     
 
 

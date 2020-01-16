@@ -10,3 +10,23 @@
 #resultsList{
     visibility: hidden;
 }
+body{
+    background-image: url(https://i.imgflip.com/12hl1s.jpg); background-size: 100%;
+    font-family: fantasy;
+    font-size: 20px;
+    text-align: center;
+}
+#rps{
+    margin: 200px 40px 20px 40px;
+    font-size: 30px;
+}
+#shootButton{
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+}
+#resetButton{
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+}

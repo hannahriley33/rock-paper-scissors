@@ -1,12 +1,6 @@
-export default function getRandomThrow(){
+export function getRandomThrow(){
     const randomNumber = math.floor(math.random()*3);
     //give 0,1,2
-    
-    const computerThrow = element(randomNumber);
-
-};
-   
-function element(){
     if (randomNumber === 0){
         return 'rock';
     } else if (randomNumber === 1){
@@ -16,24 +10,23 @@ function element(){
     };
 };
 
-
-function checkResults(userChoice, computerThrow){
-
+export function checkResults(userChoice, computerThrow){
+    
     if (userChoice === computerThrow){
         return 'draw'
     } 
     if (userChoice === 'rock' && computerThrow === 'scissors'){
-        return 'You win!';
+        return 'win';
     } else if (userChoice === 'rock' && computerThrow === 'paper'){
-        return 'You lose';
+        return 'lose';
     } else if (userChoice === 'paper' && computerThrow === 'scissors'){
-        return 'You lose';
+        return 'lose';
     } else if (userChoice === 'scissors' && computerThrow === 'paper'){
-        return 'You win!';
+        return 'win';
     } else if (userChoice === 'scissors' && computerThrow === 'rock'){
-        return 'You lose';
+        return 'lose';
     }
-
+// do all loses and draw then else is win
 };
    
-let userChoice = document.querySelector('.userChoice');
+//let userChoice = document.querySelector('.userChoice');

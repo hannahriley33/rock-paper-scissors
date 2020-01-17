@@ -1,6 +1,7 @@
-import { getRandomThrow, checkResults } from './get-random-throw.js';
+import {checkResults } from './get-random-throw.js';
 
-
+const RPSarray = ['rock', 'paper', 'scissors'];
+const randomNumber = Math.floor(Math.random()*3);
 const shootButton = document.getElementById('shootButton');
 const resetButton = document.getElementById('resetButton');
 const winsDisplay = document.getElementById('wins');
@@ -17,15 +18,24 @@ let draws = 0;
 let tries = 3;
 
 shootButton.addEventListener('click', () => {
+    
     const userInput = document.querySelector('input:checked');
     const userChoice = userInput.value;
-    const computerChoice = getRandomThrow();
+    const computerChoice = RPSarray[randomNumber];
     const results = checkResults(userChoice, computerChoice);
    
-    triesText.style.visibility = 'visible';
-    triesBox.style.visibility = 'visible';
-    resultsList.style.visibility = 'visible';
-    computerThrow.style.visibility = 'visible';
+    function visible(element, status) {
+        
+        element.style.visiblity = status;
+      
+    };
+
+    visible(triesText, 'visible');
+    visible(triesBox, 'visible');
+    visible(resultsList, 'visible');
+    visible(computerThrow, 'visible');
+
+   
 
     console.log('user', userChoice);
     console.log('computer', computerChoice);
@@ -44,14 +54,14 @@ shootButton.addEventListener('click', () => {
         wins++;
         triesText.textContent = tries;
         winsDisplay.textContent = wins;
-        resultsDisplay.style.visibility = 'visible';
+        visible(resultsDisplay, 'visible');
         resultsDisplay.textContent = 'You win!';
         tries--;
     } else if (results === 'lose'){
         loses++;
         triesText.textContent = tries;
         losesDisplay.textContent = loses;
-        resultsDisplay.style.visibility = 'visible';
+        visible(resultsDisplay, 'visible');
         resultsDisplay.textContent = 'You lose!'
         tries--;
 
@@ -59,7 +69,7 @@ shootButton.addEventListener('click', () => {
         draws++;
         triesText.textContent = tries;
         drawsDisplay.textContent = draws;
-        resultsDisplay.style.visibility = 'visible';
+        visible(resultsDisplay, 'visible');
         resultsDisplay.textContent = 'It\'s a draw!';
         tries--;
     }

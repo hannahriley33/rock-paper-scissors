@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <h1>
+        Lets play rock, paper, scissors. Go ahead and choose your first throw...
+    </h1>
+
+    <div id="computerThrow">
+        Computer threw <span id="computerThrew"></span>
+    </div>
+
+    <section id="rps">
+
+    <label>
+        <input type="radio" name="player-choice" class="userChoice" value="rock" id="rock">
+        Rock
+    </label>
+
+    <label>
+        <input type="radio" name="player-choice" class="userChoice" value="paper" id="paper">
+        Paper
+    </label>
+
+    <label>
+        <input type="radio" name="player-choice" class="userChoice" value="scissors" id="scissors">
+        Scissors
+    </label>
+
+    <label id="triesBox">
+        Tries remaining:
+        <span id="tries">3</span>
+        <br>
+    </label>
+</section>
+        <button id="shootButton" type="button">
+        Shoot
+        </button>
+    
+
+        <button id="resetButton" type="button">
+        Play again
+        </button>
+
+
+    <div class="hidden">
+        <p id="resultsList">
+            <br>
+            <br>
+            Wins:<span id="wins">0</span> Losses: <span id="loses">0</span> Draws: <span id="draws">0</span>
+        </p>
+        <p id="resultsDisplay">
+
+        </p>
+    </div>
+    
+
+
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

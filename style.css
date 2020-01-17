@@ -1,0 +1,46 @@
+#triesBox{
+    visibility: hidden;
+}
+#resetButton{
+    visibility: hidden;
+}
+.hidden{
+    visibility: hidden;
+}
+#computerThrow{
+    visibility: hidden;
+}
+#resultsList{
+    visibility: hidden;
+}
+body{
+    background-image: url(https://i.imgflip.com/12hl1s.jpg); background-size: 100%;
+    font-family: fantasy;
+    font-size: 20px;
+    text-align: center;
+}
+#rps{
+    margin: 150px 40px 20px 40px;
+    font-size: 30px;
+}
+#shootButton{
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+}
+#resetButton{
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+}
+#computerThrow{
+    font-size: 45px;
+    margin: 150px 20px 0px 600px;
+}
+#triesBox{
+
+    margin: 10px 20px 20px 100px;
+}
+#resultsList, #resultsDisplay{
+    font-size: 25px;
+}
